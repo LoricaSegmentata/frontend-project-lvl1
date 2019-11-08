@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ds",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
