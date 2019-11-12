@@ -1,8 +1,7 @@
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
+import playGame from '..';
 import getRandomInteger from '../utils';
-import welcome from '..';
 
-const correctAswersToWin = 3;
 const ruleCalc = 'What is the result of the expression?';
 
 const mathOperators = '+-*';
@@ -30,22 +29,13 @@ const calcExpression = (num1, num2, operator) => {
   return result;
 };
 
-export default () => {
-  const userName = welcome(ruleCalc);
-
-  for (let answerCount = 0; answerCount < correctAswersToWin; answerCount += 1) {
-    const Number1 = getRandomInteger();
-    const Number2 = getRandomInteger();
-    const mathOperator = getRandomOperator(mathOperators);
-    const question = `${Number1} ${mathOperator} ${Number2}`;
-    const correctAnswer = calcExpression(Number1, Number2, mathOperator);
-    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
-
-    if (userAnswer !== correctAnswer.toString()) {
-      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
-    console.log('Correct!');
-  }
-  console.log(`Congratulations, ${userName}!`);
+const createQuestionAnswerPair = () => {
+  const Number1 = getRandomInteger();
+  const Number2 = getRandomInteger();
+  const mathOperator = getRandomOperator(mathOperators);
+  const question = `${Number1} ${mathOperator} ${Number2}`;
+  const correctAnswer = calcExpression(Number1, Number2, mathOperator).toString();
+  return cons(question, correctAnswer);
 };
+
+export default () => playGame(ruleCalc, createQuestionAnswerPair);
