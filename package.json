@@ -1,7 +1,12 @@
 {
   "name": "brain-games-ds",
   "version": "1.6.1",
-  "description": "",
+  "description": "Simple CLI mathematical games",
+  "keywords": [
+    "games",
+    "maths",
+    "cli"
+  ],
   "main": "dist/index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
