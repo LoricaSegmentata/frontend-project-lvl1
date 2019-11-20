@@ -3,15 +3,15 @@ import playGame from '..';
 import getRandomInteger from '../utils';
 
 const ruleProgression = 'What number is missing in the progression?';
+const progressionLength = 10;
 
-const createArithmeticProgression = (length = 10) => {
+const createArithmeticProgression = () => {
   const firstNum = getRandomInteger();
   const step = getRandomInteger();
+  const arithmeticProgression = [];
 
-  const arithmeticProgression = [firstNum];
-  let progressionMember = firstNum;
-  for (let i = 1; i < length; i += 1) {
-    progressionMember += step;
+  for (let i = 0; i < progressionLength; i += 1) {
+    const progressionMember = firstNum + step * i;
     arithmeticProgression.push(progressionMember);
   }
   return arithmeticProgression;
