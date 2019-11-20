@@ -15,7 +15,8 @@ export default (rule, createQuestionAnswer) => {
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.`);
+      console.log(`\nLet's try again, ${userName}!`);
       return;
     }
     console.log('Correct!');
