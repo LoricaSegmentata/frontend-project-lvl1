@@ -6,9 +6,9 @@ const ruleCalc = 'What is the result of the expression?';
 
 const mathOperators = '+-*';
 
-const getRandomOperator = (str) => {
+const getRandomOperator = (operators) => {
   const index = getRandomInteger(0, mathOperators.length - 1);
-  return str[index];
+  return operators[index];
 };
 
 const calcExpression = (num1, num2, operator) => {
@@ -29,7 +29,7 @@ const calcExpression = (num1, num2, operator) => {
   return result;
 };
 
-const createQuestionAnswerPair = () => {
+const createQuestionAnswer = () => {
   const Number1 = getRandomInteger();
   const Number2 = getRandomInteger();
   const mathOperator = getRandomOperator(mathOperators);
@@ -38,4 +38,4 @@ const createQuestionAnswerPair = () => {
   return cons(question, correctAnswer);
 };
 
-export default () => playGame(ruleCalc, createQuestionAnswerPair);
+export default () => playGame(ruleCalc, createQuestionAnswer);

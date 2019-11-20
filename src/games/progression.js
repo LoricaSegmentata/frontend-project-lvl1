@@ -17,7 +17,7 @@ const createArithmeticProgression = (length = 10) => {
   return arithmeticProgression;
 };
 
-const createQuestionAnswerPair = () => {
+const createQuestionAnswer = () => {
   const progression = createArithmeticProgression();
   const hiddenMemberIndex = getRandomInteger(0, progression.length - 1);
   const correctAnswer = progression[hiddenMemberIndex].toString();
@@ -26,4 +26,4 @@ const createQuestionAnswerPair = () => {
   return cons(question, correctAnswer);
 };
 
-export default () => playGame(ruleProgression, createQuestionAnswerPair);
+export default () => playGame(ruleProgression, createQuestionAnswer);

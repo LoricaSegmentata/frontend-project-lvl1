@@ -3,15 +3,15 @@ import { car, cdr } from 'hexlet-pairs';
 
 const correctAswersToWin = 3;
 
-export default (rule, questionAnswer) => {
+export default (rule, createQuestionAnswer) => {
   console.log(`Welcome to the Brain Games!\n${rule}`);
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
   for (let answerCount = 0; answerCount < correctAswersToWin; answerCount += 1) {
-    const questionAnswerPair = questionAnswer();
-    const question = car(questionAnswerPair);
-    const correctAnswer = cdr(questionAnswerPair);
+    const questionAnswer = createQuestionAnswer();
+    const question = car(questionAnswer);
+    const correctAnswer = cdr(questionAnswer);
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (userAnswer !== correctAnswer) {

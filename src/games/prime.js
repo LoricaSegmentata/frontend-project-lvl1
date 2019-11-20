@@ -13,10 +13,10 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const createQuestionAnswerPair = () => {
+const createQuestionAnswer = () => {
   const question = getRandomInteger();
   const correctAnswer = isPrime(question);
   return cons(question, correctAnswer);
 };
 
-export default () => playGame(rulePrime, createQuestionAnswerPair);
+export default () => playGame(rulePrime, createQuestionAnswer);
