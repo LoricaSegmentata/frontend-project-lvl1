@@ -1,13 +1,13 @@
 {
   "name": "brain-games-ds",
-  "version": "1.6.1",
-  "description": "Simple CLI mathematical games",
+  "version": "1.6.2",
+  "description": "Simple CLI math games",
   "keywords": [
+    "hexlet",
     "games",
-    "maths",
+    "math",
     "cli"
   ],
-  "main": "dist/index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
