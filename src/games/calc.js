@@ -11,30 +11,30 @@ const getRandomOperator = (operators) => {
   return operators[index];
 };
 
-const calcExpression = (num1, num2, operator) => {
+const calcExpression = (a, b, operator) => {
   let result;
   switch (operator) {
     case '+':
-      result = num1 + num2;
+      result = a + b;
       break;
     case '-':
-      result = num1 - num2;
+      result = a - b;
       break;
     case '*':
-      result = num1 * num2;
+      result = a * b;
       break;
     default:
-      return NaN;
+      return null;
   }
   return result;
 };
 
 const createQuestionAnswer = () => {
-  const Number1 = getRandomInteger();
-  const Number2 = getRandomInteger();
+  const n1 = getRandomInteger();
+  const n2 = getRandomInteger();
   const mathOperator = getRandomOperator(mathOperators);
-  const question = `${Number1} ${mathOperator} ${Number2}`;
-  const correctAnswer = calcExpression(Number1, Number2, mathOperator).toString();
+  const question = `${n1} ${mathOperator} ${n2}`;
+  const correctAnswer = calcExpression(n1, n2, mathOperator).toString();
   return cons(question, correctAnswer);
 };
 

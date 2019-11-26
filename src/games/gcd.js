@@ -4,13 +4,13 @@ import getRandomInteger from '../utils';
 
 const ruleGcd = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (num1, num2) => (!num2 ? num1 : getGcd(num2, num1 % num2));
+const getGcd = (a, b) => (!b ? a : getGcd(b, a % b));
 
 const createQuestionAnswer = () => {
-  const Number1 = getRandomInteger();
-  const Number2 = getRandomInteger();
-  const question = `${Number1} ${Number2}`;
-  const correctAnswer = getGcd(Number1, Number2).toString();
+  const n1 = getRandomInteger();
+  const n2 = getRandomInteger();
+  const question = `${n1} ${n2}`;
+  const correctAnswer = getGcd(n1, n2).toString();
   return cons(question, correctAnswer);
 };
 

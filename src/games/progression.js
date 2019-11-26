@@ -6,12 +6,12 @@ const ruleProgression = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const createArithmeticProgression = () => {
-  const firstNum = getRandomInteger();
+  const start = getRandomInteger();
   const step = getRandomInteger();
   const arithmeticProgression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    const progressionMember = firstNum + step * i;
+    const progressionMember = start + step * i;
     arithmeticProgression.push(progressionMember);
   }
   return arithmeticProgression;
