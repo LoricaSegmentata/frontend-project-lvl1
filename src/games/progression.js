@@ -15,9 +15,9 @@ const createArithmeticProgression = (start, step, length) => {
 };
 
 const createQuestionAnswer = () => {
-  const start = getRandomInteger();
-  const step = getRandomInteger();
-  const progression = createArithmeticProgression(start, step, progressionLength);
+  const firstMember = getRandomInteger();
+  const diff = getRandomInteger();
+  const progression = createArithmeticProgression(firstMember, diff, progressionLength);
   const hiddenMemberIndex = getRandomInteger(0, progression.length - 1);
   const correctAnswer = progression[hiddenMemberIndex].toString();
   progression.splice(hiddenMemberIndex, 1, '..');
