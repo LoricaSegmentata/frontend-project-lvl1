@@ -42,11 +42,11 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "",
     "cross-env": "^6.0.3",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint": "",
+    "eslint-config-airbnb-base": "",
+    "eslint-plugin-babel": "",
+    "eslint-plugin-import": ""
   }
 }
